@@ -1,14 +1,13 @@
 <div class="d-flex justify-content-center">
-    <div class="signup-div">
+    <div class="signin-img">
         <img src="../../../assets/images/trello-logo-blue.jpg" width="135px;" height="42px;">
     </div>
 </div>
 <div class="d-flex justify-content-center">
-    <div *ngIf="isSignedIn">
-            <p class="h4 mb-4">Sign In</p>
+    <div *ngIf="isSignedIn" class="signin-form">
+            <p class="h4 mb-4" style="text-align: center;">Sign In</p>
             <input type="email" class="form-control mb-4" placeholder="E-mail" #email>
             <input type="password" class="form-control mb-4" placeholder="Password" #password>
-            <button class="btn btn-info btn-block my-4" (click)="onSignin(email.value,password.value); router.navigate(['/result']);" >Sign In</button>
+            <button class="btn btn-info btn-block my-4" (click)="onSignin(email.value,password.value)" >Sign In</button>
     </div>
 </div>
-<!-- <app-result *ngIf="!isSignedIn" (isLogout)="handleLogout()"></app-result> -->

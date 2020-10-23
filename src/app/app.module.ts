@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { LoginModule } from './login/login.module';
+import { BoardsModule } from './boards/boards.module';
 import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FirebaseService } from './services/firebase.service';
     AppRoutingModule,
     HomePageModule,
     LoginModule,
+    BoardsModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyApci9QOqxQJY7lvZ_nneygByAnlL2huaY",
       authDomain: "trello-webapp.firebaseapp.com",

@@ -5,8 +5,6 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ResultComponent } from './result/result.component';
 
-
-
 @NgModule({
   declarations: [SignupPageComponent, LoginPageComponent, ResultComponent],
   imports: [

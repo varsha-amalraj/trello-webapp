@@ -1,3 +1,19 @@
-.signup-div {
-    margin-top: 40px;
+#signUp {
+  height: 100%;
+  background-color: #f9fafc;
+}
+.signup-img {
+  margin-top: 40px;
+}
+
+.signup-form {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid #ebecee;
+  padding: 25px;
+}
+
+.error-msg {
+  color: red;
 }
