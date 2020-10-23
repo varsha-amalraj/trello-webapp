@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AngularFireModule} from '@angular/fire';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageModule } from './home-page/home-page.module';
-import {LoginModule} from './login/login.module';
-
+import { LoginModule } from './login/login.module';
+import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,18 @@ import {LoginModule} from './login/login.module';
     BrowserModule,
     AppRoutingModule,
     HomePageModule,
-    LoginModule
+    LoginModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyApci9QOqxQJY7lvZ_nneygByAnlL2huaY",
+      authDomain: "trello-webapp.firebaseapp.com",
+      databaseURL: "https://trello-webapp.firebaseio.com",
+      projectId: "trello-webapp",
+      storageBucket: "trello-webapp.appspot.com",
+      messagingSenderId: "932027074586",
+      appId: "1:932027074586:web:fa56dff45ccc99799ea9a3"
+    })
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,10 +3,10 @@
     
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link">Log In</a>
+        <a class="nav-link" (click)="router.navigate(['/login'])">Log In</a>
       </li>&emsp;
       <li class="nav-item dropdown">
-        <button class="form-control my-2 my-sm-0" (click)="router.navigate(['/signup'])" type="submit">Sign Up</button>
+        <button class="form-control my-2 my-sm-0" (click)="router.navigate(['/signup'])" >Sign Up</button>
       </li>
     </ul>
   </nav>

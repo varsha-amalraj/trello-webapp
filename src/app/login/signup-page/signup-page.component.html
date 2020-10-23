@@ -2,7 +2,13 @@
     <div class="signup-div">
         <img src="../../../assets/images/trello-logo-blue.jpg" width="135px;" height="42px;">
     </div>
-    <form>
-        
-    </form>
 </div>
+<div class="d-flex justify-content-center">
+    <div *ngIf="!isSignedIn">
+            <p class="h4 mb-4">Sign Up</p>
+            <input type="email" class="form-control mb-4" placeholder="E-mail" #emailSignup>
+            <input type="password" class="form-control mb-4" placeholder="Password" #passwordSignup>
+            <button class="btn btn-info btn-block my-4" (click)="onSignup(emailSignup.value,passwordSignup.value);">Sign Up</button>
+    </div>
+</div>
+<app-result *ngIf="!isSignedIn" (isLogout)="handleLogout()"></app-result>
