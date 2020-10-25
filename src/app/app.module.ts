@@ -9,6 +9,7 @@ import { LoginModule } from './login/login.module';
 import { BoardsModule } from './boards/boards.module';
 import { FirebaseService } from './services/firebase.service';
 import { ListsModule } from './lists/lists.module';
+// import { ListsModule } from './lists/lists.module';
 
 @NgModule({
   declarations: [
