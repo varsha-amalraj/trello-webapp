@@ -1,3 +1,16 @@
-<div id="header" style="min-height: 40px; max-height: 40px; overflow: hidden;">
-hi
+<div>
+    <nav class="navbar navbar-expand-lg" id="header">
+        <div>
+            <button class="form-control my-2 my-sm-0 " >Boards</button>
+        </div>
+        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" (click)="router.navigate(['/create-boards'])" style="cursor: pointer;">New Board</a>
+          </li>&emsp;
+          <li class="nav-item dropdown">
+            <button class="form-control my-2 my-sm-0" (click)="router.navigate(['/signup'])" >Logout</button>
+          </li>
+        </ul>
+      </nav>
 </div>

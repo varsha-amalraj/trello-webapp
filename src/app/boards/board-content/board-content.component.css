@@ -1,0 +1,9 @@
+#board-body {
+  height: 100%;
+  background-image: url("../../../assets/images/trello-bc.jpg");
+}
+
+li {
+  display:inline;
+  cursor: pointer;
+}
