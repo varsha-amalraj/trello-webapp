@@ -1,0 +1,22 @@
+<!--<app-home-board></app-home-board>-->
+<div id="list-body">
+    <ul *ngFor="let getlist of list">
+        <!-- <li ng-click="createList({{board.}})">{{ board }}</li> -->
+        <li routerLink="/add-task">{{ getlist }}</li>
+    </ul>
+
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+                <span style="font-size: 15px;"><b>Add List Title</b></span><br>
+                <input type="text" class="form-control" #listtitle>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <!-- <button type="button" routerLink="/add-list" class="btn btn-secondary">Close</button> -->
+            <button type="button" class="btn btn-primary" (click)="addList(listtitle.value);" formtarget="_blank">Confirm</button>
+        </div>
+    </div>
+</div>
+</div>

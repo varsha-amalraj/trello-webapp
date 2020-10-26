@@ -1,0 +1,14 @@
+<div id="task-body">
+    <ul *ngFor="let gettask of task">
+        <!-- <li ng-click="createList({{board.}})">{{ board }}</li> -->
+        <li routerLink="/add-task">{{ gettask }}</li>
+    </ul>
+    <div class="d-flex justify-content-center" id="task-form">
+        <div class="signin-form">
+                <p class="h4 mb-4" style="text-align: center;">Add Task</p>
+                <input type="text" class="form-control mb-4" placeholder="Title" #tasktitle>
+                <input type="text" class="form-control mb-4" placeholder="Task Description" #taskdesc>
+                <button class="btn btn-info btn-block my-4" (click)="addTask(tasktitle.value,taskdesc.value);">Add</button>
+        </div>
+    </div>
+</div>

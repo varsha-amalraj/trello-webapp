@@ -5,7 +5,6 @@ import { BoardsRoutingModule } from './boards-routing.module';
 import { BoardContentComponent } from './board-content/board-content.component';
 
 
-
 @NgModule({
   declarations: [HomeBoardComponent, BoardContentComponent],
   imports: [

@@ -10,4 +10,10 @@
             <input type="password" class="form-control mb-4" placeholder="Password" #password>
             <button class="btn btn-info btn-block my-4" (click)="onSignin(email.value,password.value)" >Sign In</button>
     </div>
+    <div *ngIf="isError" class="error-msg">
+        This email is does not exists! 
+        <div>
+            <a (click)="router.navigate(['/signup'])" style="cursor: pointer;color:blue;text-decoration: underline;">Click here to Register</a>
+        </div>
+    </div>
 </div>

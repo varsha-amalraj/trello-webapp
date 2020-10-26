@@ -10,6 +10,7 @@ import { FirebaseService } from '../../services/firebase.service';
 export class LoginPageComponent implements OnInit {
 
   isSignedIn = false
+  isError = false
   constructor(public firebaseService: FirebaseService, private router: Router) { }
   ngOnInit() {
     if (localStorage.getItem('user') !== null)
@@ -22,6 +23,11 @@ export class LoginPageComponent implements OnInit {
     if (this.firebaseService.isLoggedIn){
       this.isSignedIn = true
       this.router.navigate(['/boards'])
+    }else {
+      // alert("hi");
+      this.isSignedIn = false
+      this.isError = true
+      this.router.navigate(['/login'])
     }
   }
   handleLogout() {
