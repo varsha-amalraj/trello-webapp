@@ -22,9 +22,9 @@ export class LoginPageComponent implements OnInit {
     await this.firebaseService.signin(email, password)
     if (this.firebaseService.isLoggedIn){
       this.isSignedIn = true
+      this.isError = false
       this.router.navigate(['/boards'])
-    }else {
-      // alert("hi");
+    }else{
       this.isSignedIn = false
       this.isError = true
       this.router.navigate(['/login'])
